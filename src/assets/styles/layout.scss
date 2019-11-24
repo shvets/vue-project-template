@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  height: 10vh;
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    padding: 0.2rem;
+  }
+}
+
+main {
+  width: 100%;
+  height: 75vh;
+  padding: 0.2rem;
+}
+
+footer {
+  height: 10vh;
+  text-align: center;
+  color: var(--theme-text-color);
+}

@@ -1,0 +1,85 @@
+@import '~element-theme-chalk/src/common/var';
+
+$element-ui-vars: (
+  // Color
+  --color-primary: $--color-primary,
+  --color-white: $--color-white,
+  --color-black: $--color-black,
+  --color-primary-light-1: $--color-primary-light-1,
+  --color-primary-light-2: $--color-primary-light-2,
+  --color-primary-light-3: $--color-primary-light-3,
+  --color-primary-light-4: $--color-primary-light-4,
+  --color-primary-light-5: $--color-primary-light-5,
+  --color-primary-light-6: $--color-primary-light-6,
+  --color-primary-light-7: $--color-primary-light-7,
+  --color-primary-light-8: $--color-primary-light-8,
+  --color-primary-light-9: $--color-primary-light-9,
+
+  --color-success: $--color-success,
+  --color-warning: $--color-warning,
+  --color-danger: $--color-danger,
+  --color-info: $--color-info,
+
+  --color-text-primary: $--color-text-primary,
+  --color-text-regular: $--color-text-regular,
+  --color-text-secondary: $--color-text-secondary,
+  --color-text-placeholder: $--color-text-placeholder,
+
+  --border-color-base: $--border-color-base,
+  --border-color-light: $--border-color-light,
+  --border-color-lighter: $--border-color-lighter,
+  --border-color-extra-light:$--border-color-extra-light,
+
+  // Background
+  --background-color-base: $--background-color-base,
+
+  // Link
+  --link-color: var(--color-primary-light-2),
+  --link-hover-color: var(--color-primary),
+
+  // Border
+
+  // Box-shadow
+
+  // Fill
+
+  // Disable base
+  --disabled-fill-base: var(--background-color-base),
+  --disabled-color-base: var(--color-text-placeholder),
+  --disabled-border-base: var(--border-color-light),
+
+  // Menu
+  --menu-item-font-color: var(--color-text-primary),
+  --menu-background-color: var(--color-white),
+  --menu-item-hover-fill: var(--color-primary-light-9),
+
+  // Pagination
+  --pagination-background-color: var(--color-white),
+  --pagination-font-color: var(--color-text-primary),
+  --pagination-button-color: var(--color-text-primary),
+  --pagination-button-disabled-color: var(--color-text-placeholder),
+  --pagination-button-disabled-background-color: var(--color-white),
+  --pagination-hover-color: var(--color-primary),
+
+  // Table
+  --table-border-color: var(--border-color-lighter),
+  --table-border: 1px solid var(--table-border-color),
+  --table-font-color: var(--color-text-regular),
+  --table-header-font-color: var(--color-text-secondary),
+  --table-row-hover-background-color: var(--background-color-base),
+  --table-current-row-background-color: var(--color-primary-light-9),
+  --table-header-background-color: var(--color-white),
+  --table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12),
+
+  --table-row-hover-color: var(--color-primary),
+
+  // Scrollbar
+  --scrollbar-background-color: rgba(var(--color-text-secondary), .3),
+  --scrollbar-hover-background-color: rgba(var(--color-text-secondary), .5)
+);
+
+@mixin css-vars($varMap: null) {
+  @each $varName, $varValue in $element-ui-vars {
+    #{$varName}: #{$varValue}
+  }
+}

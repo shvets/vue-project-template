@@ -1,0 +1,59 @@
+.el-table {
+  a {
+    // background-color: var(--color-white);
+    color: var(--color-text-primary);
+  }
+  background-color: var(--color-white);
+  color: var(--table-font-color);
+
+  .el-table__empty-text {
+    color: var(--color-text-secondary);
+  }
+
+  //thead {
+  //  color: var(--table-header-font-color);
+
+    //&.is-group {
+    //  th {
+    //    background: var(--background-color-base);
+    //  }
+    //}
+  //}
+
+  tr {
+    background-color: var(--color-white);
+  }
+
+  th {
+    background-color: var(--table-header-background-color);
+
+    //> .cell {
+    //  &.highlight {
+    //    color: var(--color-primary);
+    //  }
+    //}
+  }
+
+  //.el-table__body {
+  //  tr.hover-row {
+  //    &, &.el-table__row--striped {
+  //      &, &.current-row {
+  //        > td {
+  //          color: var(--table-row-hover-color);
+  //          background-color: var(--table-row-hover-background-color);
+  //        }
+  //      }
+  //    }
+  //  }
+  //
+  //  tr.current-row > td {
+  //    color: var(--table-row-hover-color);
+  //    background-color: var(--table-current-row-background-color);
+  //  }
+  //}
+
+  .el-table__body tr:hover > td {
+    background-color: var(--table-row-hover-background-color);
+  }
+}
+

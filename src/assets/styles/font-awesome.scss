@@ -1,0 +1,30 @@
+$fa-css-prefix: "el-icon-fa";
+//$fa-font-path : "~font-awesome/fonts";
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+//@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+//@import '~font-awesome/scss/font-awesome.scss';
+
+//[class^="el-icon-fa"], [class*=" el-icon-fa"] {
+//  //display: inline-block;
+//  font: normal normal normal 14px/1 FontAwesome!important;
+//  //font-size: inherit;
+//  //text-rendering: auto;
+//  //-webkit-font-smoothing: antialiased;
+//  //-moz-osx-font-smoothing: grayscale;
+//};
+
+[class^="el-icon-fa"],
+[class*=" el-icon-fa"] {
+  font-family: 'Font Awesome 5 Free' !important; // Change this to 'Font Awesome 5 Pro' for pro
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: inherit;
+  text-rendering: auto;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+};
