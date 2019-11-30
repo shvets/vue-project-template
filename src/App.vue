@@ -4,7 +4,8 @@
       <router-link to="/fonts-demo">SVG</router-link> |
       <router-link to="/element-ui-demo">Element UI</router-link> |
       <router-link to="/markdown-demo">Markdown</router-link> |
-      <router-link to="/composition-api-demo">Composition API</router-link>
+      <router-link to="/composition-api-demo">Composition API</router-link> |
+      <router-link to="/picture-view">Picture View</router-link>
     </div>
     <router-view />
   </div>

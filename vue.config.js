@@ -3,7 +3,8 @@ const Mode = require('frontmatter-markdown-loader/mode');
 
 module.exports = {
   css: {
-    sourceMap: true
+    sourceMap: true,
+    requireModuleExtension: true
   },
 
   transpileDependencies: [

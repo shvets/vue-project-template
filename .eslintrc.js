@@ -25,7 +25,7 @@ module.exports = {
     'adjacent-overload-signatures': 'off'
   },
   parserOptions: {
-    parser: '@typescript-eslint/parser'
+    // parser: '@typescript-eslint/parser'
   },
   overrides: [
     {
