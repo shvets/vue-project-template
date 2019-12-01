@@ -1,9 +1,10 @@
 <template>
-    <figure v-lazy-load class="picture-wrapper scalable-picture media-parent" :class="selectedClasses">
+    <figure v-lazy-load class="picture-wrapper scalable-picture media-parent">
         <ImageSpinner class="picture-spinner"/>
 
-        <img ref="image" data-toggle-fullscreen class="picture"
-             :class="pictureClasses" :style="pictureStyle"
+        <img ref="picture"
+             class="picture" :class="pictureClasses" :style="pictureStyle"
+             data-toggle-fullscreen
              src='' :data-url="url" alt=""
              @click="onClick" @dblclick="onDoubleClick"
              @mouseover="onMouseOver" @mouseout="onMouseOut">
@@ -50,20 +51,15 @@ export default class ScalablePicture extends Vue {
     protected selected!: boolean;
 
     @Ref()
-    protected image!: Vue;
+    protected picture!: Vue;
 
     private doubleClickSupport = new DoubleClickSupport();
 
     private entered = false;
 
-    protected get pictureSelected(): boolean {
-        return this.enableSelection && this.enableEdit && this.entered || this.highlighted;
-    }
-
     protected get pictureStyle() {
         return {
             border: this.pictureSelected ? '2px gray solid' : 'none',
-            //transform: this.pictureSelected ? 'scale(1)' : 'scale(1)'
         };
     }
 
@@ -71,12 +67,8 @@ export default class ScalablePicture extends Vue {
         return [this.flip ? 'flip' : ''];
     }
 
-    protected get selectedClasses(): string[] {
-        return [this.enableSelection && this.enableEdit && this.selected ? 'selected' : ''];
-    }
-
-    protected created() {
-        //this.imageUrl = this.url;
+    protected get pictureSelected(): boolean {
+        return this.enableSelection && this.enableEdit && this.entered || this.highlighted;
     }
 
     // noinspection JSUnusedGlobalSymbols
@@ -88,7 +80,7 @@ export default class ScalablePicture extends Vue {
         if (document.fullscreenElement) {
             document.exitFullscreen();
         } else {
-            (this.image as any).requestFullscreen();
+            (this.picture as any).requestFullscreen();
         }
 
         this.doubleClickSupport!.handleDoubleClick(event.src, this);
@@ -130,5 +122,14 @@ export default class ScalablePicture extends Vue {
             width: 100%;
         }
     }
+}
+
+.flip {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.selected {
+    border: 2px blue solid;
 }
 </style>

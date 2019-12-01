@@ -2,9 +2,11 @@
     <div class="img-demo">
         <app-layout>
             <div class="article-item">
-                <ScalablePicture v-for="article in articles.filter(a => a.urlToImage)" class="article-item__image"
-                           :url="article.urlToImage"
-                           :key="article.publishedAt" />
+                <ScalablePicture v-for="article in articles.filter(a => a.urlToImage)"
+                                 class="article-item__image"
+                                 :enable-selection="true" :enable-edit="true" :selected="false" :highlighted="false"
+                                 :url="article.urlToImage"
+                                 :key="article.publishedAt" />
             </div>
         </app-layout>
     </div>
