@@ -26,10 +26,10 @@ const CompositionApiDemo = () =>
         '@/components/CompositionApiDemo.vue'
         );
 
-const AppImgView = () =>
+const PictureView = () =>
     import(
-        /* webpackChunkName: "app-img-view" */
-        '@/views/AppImgView.vue'
+        /* webpackChunkName: "picture-view" */
+        '@/views/PictureView.vue'
         );
 
 const NotFoundView = () =>
@@ -66,9 +66,9 @@ const routes: RouteConfig[] = [
     component: CompositionApiDemo
   },
   {
-    path: '/app-img-view',
-    name: 'app-img-view',
-    component: AppImgView
+    path: '/picture-view',
+    name: 'picture-view',
+    component: PictureView
   },
   { path: '*', component: NotFoundView }
 ];
