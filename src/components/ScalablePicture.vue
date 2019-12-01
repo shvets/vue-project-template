@@ -10,13 +10,13 @@
     import Vue from 'vue';
     import {Component, Prop} from 'vue-property-decorator';
 
-    import LazyLoadDirective from '../directives/lazy-load-directive.js';
+    import LazyLoadDirective from '../directives/lazy-load-directive';
 
     const directives = {
         'lazyload': LazyLoadDirective,
     };
 
-    import ImageSpinner from './ImageSpinner';
+    import ImageSpinner from './ImageSpinner.vue';
 
     const components = {
         ImageSpinner
