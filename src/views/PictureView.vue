@@ -3,7 +3,7 @@
         <app-layout>
             <div class="article-item">
                 <ScalablePicture v-for="article in articles.filter(a => a.urlToImage)" class="article-item__image"
-                           :source="article.urlToImage"
+                           :url="article.urlToImage"
                            :key="article.publishedAt" />
             </div>
         </app-layout>

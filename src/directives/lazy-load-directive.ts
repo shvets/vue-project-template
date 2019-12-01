@@ -1,7 +1,10 @@
+const imageUnavailable = '';
+//require('../../../../assets/images/picture-unavailable.png');
+
 class LazyLoadHelper {
     public constructor(private element: HTMLElement) {}
 
-    public loadImage() {
+    public loadImage(): any {
         const imageElement: any = Array.from(this.element.children).find((el) =>
             el.nodeName === 'IMG'
         );
@@ -11,10 +14,14 @@ class LazyLoadHelper {
                 setTimeout(() => this.element.classList.add('loaded'), 100);
             });
 
-            imageElement.addEventListener('error', () => console.log('error'));
+            imageElement.addEventListener('error', () => {
+                imageElement.src = imageUnavailable;
+            });
 
             imageElement.src = imageElement.dataset.url;
         }
+
+        return imageElement;
     }
 
     public createObserver(handleIntersect: any) {
